@@ -56,7 +56,7 @@
                     </li>
                 </ul> 
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in fa-md"></span>
                         Login
                     </a>
@@ -200,7 +200,7 @@
                 <div class="col-12 col-sm align-self-center">
                     <!-- <a href="#Reservation" class="btn btn-sm btn-warning btn-block" data-toggle="tooltip" data-html="true" 
                     title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom"> -->
-                    <a href="#Reservation" class="btn btn-sm btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">
+                    <a id="reservationButton" class="btn btn-sm btn-warning btn-block">
                         Reserve Table
                     </a>
                 </div>
@@ -324,7 +324,7 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-itmes-center">
+<!--         <div class="row row-content align-itmes-center">
             <div class="col-sm-8 col-12">
                 <div class="card">
                     <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
@@ -332,7 +332,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <footer class=footer>
         <div class="conatainer">
@@ -424,6 +424,19 @@
             // {
             //     $('mycarousel').carousel('cycle');
             // });
+        });
+    </script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#reservationButton").click(function()
+            {
+                $("#reserveModal").modal("show");
+            });
+            $("#loginButton").click(function()
+            {
+                $("#loginModal").modal("show");
+            });
         });
     </script>
 </body>
